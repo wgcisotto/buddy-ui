@@ -1,0 +1,21 @@
+<div class="inner-div">
+    <h1>Supermercado</h1>
+    <mat-form-field appearance="fill">
+        <mat-label>Data</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+      <mat-label>Valor</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <br>
+    <button mat-icon-button aria-label="Cancelar">
+        <mat-icon>cancel</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Confirmar">
+        <mat-icon>done_outlined</mat-icon>
+    </button>
+</div>

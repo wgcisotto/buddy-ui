@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.outer-div {
+    padding-top: 10px;
+    padding-bottom: 10%;
+    width: 100%;
+    text-align:center;
+}
+
+span {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0,0,0,.54);
+}
+
+/* .mat-icon {
+    border-right: 10px;
+} */

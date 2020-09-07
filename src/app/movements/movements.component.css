@@ -1,0 +1,41 @@
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+    width: 100%;
+}
+
+.divTableRowCheckBox{
+	display: table-row;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.divTableCellDate {
+    display: table-cell;
+    width: 15%;
+}
+
+.divTableCellDate, span {
+    color: lightgray;
+    text-align: left;
+    font-size: 85%;
+    /* vertical-align: top; */
+}
+    
+.divTableCellRight {
+    display: table-cell;
+    text-align: left;
+    padding-left: 3%;
+}
+.divTableCellCenter {
+	display: table-cell;
+    text-align: center;
+}
+.divTableCellLeft {
+    text-align: right;
+	display: table-cell;
+    padding-right: 3%;
+}

@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.inner-div {
+    /* display: inline-block; */
+    margin: 0 auto;
+    margin-top: 1%;
+    padding: 2%;
+    /* background-color: lightgray; */ 
+    width: 50%;
+    /* height: 70%; */
+    font-family: sans-serif;
+    /* font-size: 1.5rem; */
+    /* float: left; */
+    background: #fafafa;;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 4px -2px #989898;
+    -moz-box-shadow: 0 4px 4px -2px #989898;
+    -webkit-box-shadow: 0 4px 4px -2px #989898;
+}
+
+
+.mat-h1, .mat-headline, .mat-typography h1 {
+    font-family: "Copperplate Gothic Light"; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; 
+    color: #0252a7;
+}
