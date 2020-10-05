@@ -1,0 +1,52 @@
+<div class="inner-div">
+    <h1>Movimentações</h1>
+    <br>
+    <div>
+        <form [formGroup]="form" (submit)="submitDateChange()">
+            <div class="month-year-filter">
+                <ejs-datepicker #ejDateTimePicker [start]='start' [depth]='depth' [format]='format'
+                    (blur)="submitDateChange()" formControlName="timelineDate"></ejs-datepicker>
+            </div>
+        </form>
+
+        <mat-selection-list #mov [multiple]="false">
+
+            <mat-list-option *ngFor="let movement of movements; last as last" [value]="movement">
+                <div class="divTable">
+                    <div class="divTableRow">
+                        <div class="divTableCellDate">
+                            <span>{{movement.date | date:'d MMM'}}</span>
+                        </div>
+                        <div class="divTableCellLeft" style="width: 30%;">{{movement.title}} - {{movement.description}}
+                        </div>
+                        <div class="divTableCellLeft">
+                            <mat-icon matTooltip="{{movement.category.name}}">{{movement.category.icon}}</mat-icon>
+                        </div>
+                        <div class="divTableCellRight" style="width: 30%;">{{movement.account.name}}</div>
+                        <div class="divTableCellRight">
+                            <label
+                                [ngClass]="{'expense-line' : movement.type == 'EXPENSE', 'income-line' : movement.type == 'INCOME' }">
+                                {{movement.type == 'EXPENSE' ? '- ' : '+ ' }}
+                            </label>
+                            <!-- [ngStyle]="{'color' : (movement.type == 'EXPENSE' )? 'red' : 'rgb(76, 175, 80)'}">{{movement.type == 'EXPENSE' ? '- ' : '+ ' }}</label> -->
+                            <span
+                                [ngClass]="{'expense-line' : movement.type == 'EXPENSE', 'income-line' : movement.type == 'INCOME' }">
+                                {{movement.amount}}€
+                            </span>
+
+
+                            <mat-icon matTooltip="Ainda nao foi pago">warning</mat-icon>
+                        </div>
+
+                        <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+            </mat-list-option>
+        </mat-selection-list>
+
+        <br>
+        <p>Option selected: {{mov.selectedOptions.selected[0]?.value.id}}</p>
+
+    </div>
+</div>

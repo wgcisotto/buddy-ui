@@ -1,0 +1,223 @@
+<div class="inner-div">
+    <h1>Balanço anual</h1>
+    
+
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+      <mat-tab label="Relatório">
+        <!-- Adicionar em um componente separado -->
+        <table id="report">
+          <tr>
+            <th></th>
+            <th>Janeiro</th> 
+            <th>Fevereiro</th>
+            <th>Março</th>
+            <th>Abril</th>
+            <th>Maio</th>
+            <th>Junho</th>
+            <th>Julho</th>
+            <th>Agosto</th>
+            <th>Setembro</th>
+            <th>Outubro</th>
+            <th>Novembro</th>
+            <th>Dezembro</th>
+          </tr>      
+          
+          <tr>
+            <td>Supermercado</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['SUPERMARKET'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Casa</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['HOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['HOME'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Bar e Restaurante</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['BARS / RESTAURANT'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Saúde / Farmácia</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['HEALTH'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Transporte</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['TRANSPORTATION'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Serviços</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['SERVICES'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Lazer</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['LEISURE'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Educação</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['EDUCATION'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Outros</td>
+            <td>{{report['JANUARY'] == null ? '-' : report['JANUARY']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['FEBRUARY'] == null ? '-' : report['FEBRUARY']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MARCH'] == null ? '-' : report['MARCH']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['APRIL'] == null ? '-' : report['APRIL']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['MAY'] == null ? '-' : report['MAY']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JUNE'] == null ? '-' : report['JUNE']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['JULY'] == null ? '-' : report['JULY']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['AUGUST'] == null ? '-' : report['AUGUST']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['SEPTEMBER'] == null ? '-' : report['SEPTEMBER']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['OCTOBER'] == null ? '-' : report['OCTOBER']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['NOVEMBER'] == null ? '-' : report['NOVEMBER']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+            <td>{{report['DECEMBER'] == null ? '-' : report['DECEMBER']['OTHERS'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Total recebido</td>
+            <td>{{reportCompact['JANUARY'] == null ? '-' : reportCompact['JANUARY']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['FEBRUARY'] == null ? '-' : reportCompact['FEBRUARY']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['MARCH'] == null ? '-' : reportCompact['MARCH']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['APRIL'] == null ? '-' : reportCompact['APRIL']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['MAY'] == null ? '-' : reportCompact['MAY']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['JUNE'] == null ? '-' : reportCompact['JUNE']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['JULY'] == null ? '-' : reportCompact['JULY']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['AUGUST'] == null ? '-' : reportCompact['AUGUST']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['SEPTEMBER'] == null ? '-' : reportCompact['SEPTEMBER']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['OCTOBER'] == null ? '-' : reportCompact['OCTOBER']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['NOVEMBER'] == null ? '-' : reportCompact['NOVEMBER']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['DECEMBER'] == null ? '-' : reportCompact['DECEMBER']['TOTAL_INCOME'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Total gasto</td>
+            <td>{{reportCompact['JANUARY'] == null ? '-' : reportCompact['JANUARY']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['FEBRUARY'] == null ? '-' : reportCompact['FEBRUARY']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['MARCH'] == null ? '-' : reportCompact['MARCH']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['APRIL'] == null ? '-' : reportCompact['APRIL']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['MAY'] == null ? '-' : reportCompact['MAY']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['JUNE'] == null ? '-' : reportCompact['JUNE']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['JULY'] == null ? '-' : reportCompact['JULY']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['AUGUST'] == null ? '-' : reportCompact['AUGUST']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['SEPTEMBER'] == null ? '-' : reportCompact['SEPTEMBER']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['OCTOBER'] == null ? '-' : reportCompact['OCTOBER']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['NOVEMBER'] == null ? '-' : reportCompact['NOVEMBER']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['DECEMBER'] == null ? '-' : reportCompact['DECEMBER']['TOTAL_EXPENSE'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+    
+          <tr>
+            <td>Balanço</td>
+            <td>{{reportCompact['JANUARY'] == null ? '-' : reportCompact['JANUARY']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['FEBRUARY'] == null ? '-' : reportCompact['FEBRUARY']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['MARCH'] == null ? '-' : reportCompact['MARCH']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['APRIL'] == null ? '-' : reportCompact['APRIL']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['MAY'] == null ? '-' : reportCompact['MAY']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['JUNE'] == null ? '-' : reportCompact['JUNE']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['JULY'] == null ? '-' : reportCompact['JULY']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['AUGUST'] == null ? '-' : reportCompact['AUGUST']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['SEPTEMBER'] == null ? '-' : reportCompact['SEPTEMBER']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['OCTOBER'] == null ? '-' : reportCompact['OCTOBER']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['NOVEMBER'] == null ? '-' : reportCompact['NOVEMBER']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+            <td>{{reportCompact['DECEMBER'] == null ? '-' : reportCompact['DECEMBER']['BALANCE'] |currency:"EUR":"symbol"}}</td>
+          </tr>
+          
+      
+        </table>
+      </mat-tab>
+      <mat-tab label="Gráfico linhas">Aqui vai ter o grafico como no sheets</mat-tab>
+      <mat-tab label="Gráfico Pizza">Content 3</mat-tab>
+    </mat-tab-group>
+</div>

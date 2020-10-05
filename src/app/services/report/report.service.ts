@@ -1,4 +1,3 @@
-import { AnnualReport } from './../../models/AnnualReport';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
@@ -24,6 +23,14 @@ export class ReportService {
         catchError(this.handleError<Map<string, Map<string, number>>>('getReport', null))
       );
   }
+
+  getReportCompact (): Observable<Map<string, Map<string, number>>> {
+    const url = `${this.reportUrl}?result=compact`;
+    return this.http.get<Map<string, Map<string, number>>>(url, this.httpOptions).pipe(
+        catchError(this.handleError<Map<string, Map<string, number>>>('getReport', null))
+      );
+  }
+
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

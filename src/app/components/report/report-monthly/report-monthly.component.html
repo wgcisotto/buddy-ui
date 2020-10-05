@@ -1,0 +1,34 @@
+<div class="inner-div">
+  <h1>Gráficos</h1>
+  <br>
+  <div>
+    <form [formGroup]="form" (submit)="submitDateChange()">
+      <div class="month-year-filter">
+              <ejs-datepicker #ejDateTimePicker [start]='start' [depth]='depth' [format]='format'
+                  (blur)="submitDateChange()"
+                  formControlName="filterDate"></ejs-datepicker>
+      </div>
+    </form>
+  
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+      <mat-tab label="Média mensal">
+        <div style="display: block">
+          <canvas baseChart [data]="pieChartData" [labels]="categoryLabels" [chartType]="pieChartType" [colors]="pieChartColors"></canvas>
+        </div>
+      </mat-tab>
+      <mat-tab label="Previsão Mensal">
+        <div style="display: block">
+          <canvas baseChart [datasets]="barChartData" [labels]="categoryLabels" [chartType]="barChartType"></canvas>
+        </div>
+      </mat-tab>
+      <mat-tab label="Ultimos 3 Meses">
+        <div style="display: block;">
+          <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [chartType]="lineChartType">
+          </canvas>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <br/>
+    <button mat-raised-button (click)="openDialog()">Setup</button>
+  </div>
+</div>

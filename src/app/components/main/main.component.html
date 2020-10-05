@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button routerLink="/" aria-label="controle financeiro menu">
+        <!-- (click)="sidenav.toggle()" -->
+        <mat-icon style="font-size: 30px;">dashboard</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened>
+        <mat-nav-list>
+
+            <a mat-list-item [routerLink]="'/'"> 
+                <mat-icon>home</mat-icon>
+                <span>Dashboard</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item [routerLink]="'/movements-timeline'">
+                <mat-icon>swap_horiz</mat-icon>
+                <span>Movimentos</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item [routerLink]="'/movements'" [queryParams]="{type: movementLayoutType.supermarket}">
+                <mat-icon>local_grocery_store</mat-icon>
+                <span>Mercado</span>
+            </a>
+            <a mat-list-item [routerLink]="'/movements'" [queryParams]="{type: movementLayoutType.expense_fixed}">
+                <mat-icon>history</mat-icon>
+                <span>Desp. Fixas</span>
+            </a>
+            <a mat-list-item [routerLink]="'/movements'" [queryParams]="{type: movementLayoutType.expense_others}">
+                <mat-icon>credit_card</mat-icon>
+                <span>Outras Desp.</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item [routerLink]="'/movements'" [queryParams]="{type: movementLayoutType.income}">
+                <mat-icon>euro_symbol</mat-icon>
+                <span>Receitas</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item [routerLink]="'/report-annual'">
+                <mat-icon>insert_chart_outlined</mat-icon>
+                <span>Relatório Anual</span>
+            </a>
+            <a mat-list-item [routerLink]="'/report-monthly'">
+                <mat-icon>calendar_today</mat-icon>
+                <span>Gráficos</span>
+            </a>
+            
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

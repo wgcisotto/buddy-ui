@@ -1,0 +1,65 @@
+/* @import '../../../../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-angular-calendars/styles/material.css'; */
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+
+.divTableCellDate {
+    display: table-cell;
+    width: 15%;
+}
+
+.divTableCellDate, span {
+    color: lightgray;
+    text-align: left;
+    font-size: 85%;
+    /* vertical-align: top; */
+}
+    
+.divTableCellLeft {
+    display: table-cell;
+    text-align: left;
+}
+.divTableCellCenter {
+	display: table-cell;
+    text-align: center;
+}
+.divTableCellRight {
+    text-align: right;
+	display: table-cell;
+}
+
+.mat-icon {
+    font-size: 20px;
+  }
+  
+
+.month-year-filter {
+    /* max-width: 150px; */
+	width: 20%;
+    margin: 0px auto;
+    padding-bottom: 50px;
+}
+
+.expense-line {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.15rem;
+    color: rgb(244, 67, 54);
+}
+
+.income-line {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.15rem;
+    color: rgb(76, 175, 80);
+}

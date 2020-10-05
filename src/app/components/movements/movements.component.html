@@ -1,0 +1,143 @@
+<div class="inner-div">
+    <h1>{{typeOfMovement}}</h1>
+    <div style="text-align: center;">
+        <form [formGroup]="form" (submit)="submit()">
+            <div class="divTable">
+
+                <div class="divTableRow">
+                    <div class="divTableCellLeft">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Titulo</mat-label>
+                            <input required matInput formControlName="title">
+                        </mat-form-field>
+                    </div>
+                    <div class="divTableCellRight">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Descricao</mat-label>
+                            <input matInput formControlName="description">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="divTableRow">
+                    <div class="divTableCellLeft">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Data</mat-label>
+                            <input matInput formControlName="date" [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="divTableCellRight">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Valor</mat-label>
+                            <input matInput required formControlName="amount">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCellLeft">
+                        <mat-form-field>
+                            <mat-chip-list #categList aria-label="Categ selection" required>
+                                <mat-chip *ngFor="let categ of categs" [selectable]="selectable" [removable]="removable"
+                                    (removed)="removeCateg(categ)">
+                                    {{categ.name}}
+                                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                </mat-chip>
+                                <input placeholder="Categoria" #categInput [formControl]="categCtrl" required
+                                    [matAutocomplete]="auto" [matChipInputFor]="categList">
+                                <!-- (matChipInputTokenEnd)="addCateg($event)" -->
+                                <!-- [matChipInputSeparatorKeyCodes]="separatorKeysCodes" -->
+                            </mat-chip-list>
+                            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedCateg($event)">
+                                <mat-option *ngFor="let categ of filteredCateg | async" [value]="categ">
+                                    {{categ.name}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                    <div class="divTableCellRight">
+                        <mat-form-field>
+                            <mat-chip-list #accountsList aria-label="Account selection">
+                                <mat-chip *ngFor="let account of accounts" [selectable]="selectable">
+                                    <!-- [removable]="removable" (removed)="removeAccount(account)" -->
+                                    {{account.name}}
+                                    <!-- <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon> -->
+                                </mat-chip>
+                                <input placeholder="Conta" #accountInput [formControl]="accountCtrl"
+                                    [matAutocomplete]="autoAccount" [matChipInputFor]="accountsList">
+                                <!-- [matChipInputSeparatorKeyCodes]="separatorKeysCodes" -->
+                                <!-- (matChipInputTokenEnd)="addAccount($event)" -->
+                            </mat-chip-list>
+                            <mat-autocomplete #autoAccount="matAutocomplete" (optionSelected)="selectedAccount($event)">
+                                <mat-option *ngFor="let account of filteredAccount | async" [value]="account">
+                                    {{account.name}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                </div>
+                    <div class="divTableRowCheckBox">
+                        <div class="divTableCellLeft">
+                            <ng-container *ngIf="typeOfMovement == movementLayoutType.expense_fixed || typeOfMovement == movementLayoutType.income">
+                                <section>
+                                    <mat-checkbox style="line-height: 50px;" formControlName="fixed">Valor fixo</mat-checkbox>
+                                </section>
+                            </ng-container>
+                        </div>
+                        <div class="divTableCellRight">
+                            <ng-container *ngIf="typeOfMovement == movementLayoutType.income">
+                                <section>
+                                    <mat-checkbox formControlName="recurrent" style="line-height: 50px;">Recorrente </mat-checkbox>
+                                </section>
+                            </ng-container>
+                        </div>
+                    </div>
+
+
+                    <ng-container *ngIf="typeOfMovement == movementLayoutType.expense_fixed || typeOfMovement == movementLayoutType.income">
+                    <div class="divTableRow">
+                        <div class="divTableCellLeft">
+
+                            <ng-container>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Franquência</mat-label>
+                                    <mat-select formControlName="frequency" required>
+                                        <mat-option value="DAILY">Diária</mat-option>
+                                        <mat-option value="WEEKLY">Semanal</mat-option>
+                                        <mat-option value="MONTHLY">Mensal</mat-option>
+                                        <mat-option value="YEARLY">Anual</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </ng-container>
+                        </div>
+                        <div class="divTableCellRight">
+                            <ng-container>
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Vezes</mat-label>
+                                    <input matInput formControlName="recurrenceTimes" matTooltip="Quantidade de vezes que ira se repetir" placeholder="vazio = tempo indeterminado" value="">
+                                </mat-form-field>
+                            </ng-container>
+                        </div>
+                    </div>
+                </ng-container>
+
+                <div class="divTableRow">
+                    <div class="divTableCellLeft">
+                        <button mat-raised-button color="primary">Confirmar</button>
+                    </div>
+                    <div class="divTableCellRight">
+                        <button mat-raised-button color="warn" [routerLink]="'/report-annual'">Cancelar</button>
+                    </div>
+                </div>
+                <div class="divTableCellLeft">
+                    <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableCell">&nbsp;</div>
+                </div>
+            </div>
+
+        </form>
+        <br />
+        <br>
+    </div>
+</div>
